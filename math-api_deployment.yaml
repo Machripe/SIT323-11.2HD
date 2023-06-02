@@ -1,0 +1,28 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: math-api
+  labels:
+    k8s-app: math-api
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      k8s-app: math-api
+  template:
+    metadata:
+      name: math-api
+      creationTimestamp: null
+      labels:
+        k8s-app: math-api
+    spec:
+      containers:
+        - name: math-api
+          image: machripe/math-api
+          resources: {}
+          imagePullPolicy: Always
+          securityContext:
+            privileged: false
+      restartPolicy: Always
+      terminationGracePeriodSeconds: 30
+      dnsPolicy: ClusterFirst

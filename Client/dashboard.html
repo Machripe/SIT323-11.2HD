@@ -1,0 +1,40 @@
+<head>
+    <title>Math Portal</title>
+    <link rel='stylesheet' type='text/css' href='css/main.css'>
+</head>
+<body>
+    <div class="center">
+        <h1>Welcome to the math portal!</h1>
+        <form action="./mathaction">
+            <label for="num1">First Number:</label><br>
+            <input type="text" name="num1" value=""><br>
+            <label for="num2">Second Number:</label><br>
+            <input type="text" name="num2" value=""><br><br>
+            <input type="submit" name="calculate" value="Calculate">
+            <fieldset>
+                <legend>Select a math function:</legend>
+
+                <div>
+                    <input type="radio" id="addition" name="function" value="Addition" checked>
+                    <label for="addition">Addition</label>
+                </div>
+
+                <div>
+                    <input type="radio" id="multiplication" name="function" value="Multiplication">
+                    <label for="multiplication">Multiplication</label>
+                </div>
+
+                <div>
+                    <input type="radio" id="subtraction" name="function" value="Subtraction">
+                    <label for="subtraction">Subtraction</label>
+                </div>
+
+                <div>
+                    <input type="radio" id="division" name="function" value="Division">
+                    <label for="division">Division</label>
+                </div>
+            </fieldset>
+        </form>
+        <span id="result_span"><!--result--></span>
+    </div>
+</body>

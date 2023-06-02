@@ -1,0 +1,16 @@
+body {
+    width: 50%;
+    color: #737373;
+    background: #a3bbd6;
+    margin: auto;
+    margin-top: 10%;
+}
+.ipsum-quote {
+    font-family: 'Times New Roman', Times, serif;
+    font-style: italic;
+    color: #996633;
+}
+.center {
+    display: block;
+    text-align: center;
+}

@@ -1,0 +1,26 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: math-api
+  labels:
+    k8s-app: math-api
+spec:
+  ports:
+    - port: 49162
+      protocol: TCP
+      targetPort: 3001
+      nodePort: 32002
+  selector:
+    k8s-app: math-api
+  type: LoadBalancer
+  sessionAffinity: None
+  externalTrafficPolicy: Cluster
+  ipFamilies:
+    - IPv4
+  ipFamilyPolicy: SingleStack
+  allocateLoadBalancerNodePorts: true
+  internalTrafficPolicy: Cluster
+status:
+  loadBalancer:
+    ingress:
+      - hostname: localhost
